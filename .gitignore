@@ -1,0 +1,18 @@
+### Terraform files
+
+.terraform/
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+terraform.tfstate
+
+secret_pat_git
+eks/terraform.tfstate.backup
+*.crt
+*.pem
+*.key
+*.p12
+*.local.yaml
+.env
+.env.*
+kind-ca.crt
+app-config.local.yaml

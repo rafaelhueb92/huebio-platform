@@ -1,0 +1,60 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: rafael.hueb
+  description: Platform Engineer
+spec:
+  memberOf: [group:default/team-cep]
+  profile:
+    displayName: Rafael Hueb
+    email: rafael.hueb@empresa.com
+    picture: https://avatars.githubusercontent.com/u/34714654?v=4
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+spec:
+  memberOf: [guests]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+spec:
+  memberOf: [guests]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: guest
+spec:
+  memberOf: [guests]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: guests
+spec:
+  type: team
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: team-cep
+  description: Time responsável pela API de CEP
+  tags:
+    - api
+    - backend
+spec:
+  type: team
+  profile:
+    displayName: Team CEP
+    email: team-cep@empresa.com
+  children: []
+  members: [rafael.hueb]
